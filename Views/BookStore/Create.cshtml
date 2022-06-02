@@ -1,0 +1,21 @@
+@model Book_Store.Models.Book
+
+<h2>New Book</h2>
+<form asp-action="Create" method="post">
+    <div class="form-horizontal">
+        <hr />
+        <div class="form-group">
+            <label asp-for="Title" class="col-md-2 control-label"></label>
+            <div class="col-md-10">
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-info">Back</a>
+            </div>
+        </div>
+    </div>
+</form>
